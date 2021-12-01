@@ -9,8 +9,17 @@ import io.restassured.specification.RequestSpecification;
 import java.io.*;
 import java.util.Properties;
 
+/**
+ * The type Utils.
+ */
 public class Utils {
 
+    /**
+     * Headers request specification.
+     *
+     * @return the request specification
+     * @throws IOException the io exception
+     */
     public RequestSpecification headers() throws IOException {
 
         PrintStream log = new PrintStream(new FileOutputStream("C:\\Users\\dasab\\IdeaProjects\\LibraryAPIFramework\\Logs\\logging_"+DateandTime.addDateTime()+".txt"));
@@ -23,6 +32,13 @@ public class Utils {
         return req;
     }
 
+    /**
+     * Get global properties string.
+     *
+     * @param param the param
+     * @return the string
+     * @throws IOException the io exception
+     */
     public String GetGlobalProperties(String param) throws IOException {
 
         Properties prop = new Properties();
